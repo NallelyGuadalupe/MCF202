@@ -39,3 +39,25 @@ t.test(vivero$IE ~ vivero$Tratamiento, var.equal =T)
 #El valor de p no existe una diferencia significativa entre el IE de las plantulas fertilizadas
 #El valor de p comprueba nuestra hipotesis de que el fertilizante "Power"
 #mejora el IE
+
+t.test(vivero$IE ~ vivero$Tratamiento)
+
+
+# Prueba de t muestras dependientes ---------------------------------------
+
+t.test(vivero$IE ~ vivero$Tratamiento, paired = T)
+
+inventario <- read.csv("C:/MCF202-2019/MCF202/Datos/produccion.csv")
+summary(inventario)
+
+boxplot(inventario$Kgsem ~ inventario$Tiempo, col= "lightblue")
+t.test(inventario$Kgsem ~ inventario$Tiempo, paired=T)
+
+#no hay diferencias significativas entre las graficas 
+
+boxplot(inventario$Germ ~ inventario$Tiempo, col= "green")
+t.test(inventario$Germ ~ inventario$Tiempo, paired=T)
+
+tapply(inventario$Germ, inventario$Tiempo, mean)
+boxplot(inventario$Germ ~ inventario$Tirmpo)
+t.test(inventario$Germ ~ inventario$Tiempo, paired = T)
