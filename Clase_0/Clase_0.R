@@ -58,3 +58,4 @@ T.mean <- subset(DB_alturas,crecimiento >= mean(DB_alturas$crecimiento))
 boxplot(T.mean$crecimiento ~ T.mean$tratamiento)
 
 
+
