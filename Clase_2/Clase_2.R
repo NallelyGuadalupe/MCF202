@@ -59,5 +59,7 @@ boxplot(inventario$Germ ~ inventario$Tiempo, col= "green")
 t.test(inventario$Germ ~ inventario$Tiempo, paired=T)
 
 tapply(inventario$Germ, inventario$Tiempo, mean)
-boxplot(inventario$Germ ~ inventario$Tirmpo)
+boxplot(inventario$Germ ~ inventario$Tiempo)
 t.test(inventario$Germ ~ inventario$Tiempo, paired = T)
+
+
