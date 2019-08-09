@@ -23,6 +23,8 @@ tapply(Datos$Ansiedad, Datos$Grupo, mean)
 #Sapiro test
 shapiro.test(Datos$Ansiedad)
 
+bartlett.test(Datos$Ansiedad, Datos$Grupo)
+
 library(pastecs)
 
 
